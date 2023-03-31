@@ -1,0 +1,1 @@
+from .competitive_pricing import CompetitivePricing

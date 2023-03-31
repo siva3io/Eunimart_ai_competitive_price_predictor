@@ -1,0 +1,1639 @@
+{
+	"info": {
+		"_postman_id": "35238b17-7039-4478-8dd1-f4bde24aa19c",
+		"name": "access_control copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "services",
+			"item": [
+				{
+					"name": "create_services",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"service_value\": \"Dashboard1\",\n            \"description\": \"\"\n        },\n        {\n            \"service_value\": \"Dashboard2\",\n            \"description\": \"\"\n        }\n    ],\n    \"user_info\": {\n        \"user_id\": \"12312\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{access_control_url}}/api/v2/acl/services/create_services",
+							"host": [
+								"{{access_control_url}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"acl",
+								"services",
+								"create_services"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create_services_success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": [\n        {\n            \"service_value\": \"Dashboard1\",\n            \"description\": \"\"\n        },\n        {\n            \"service_value\": \"Dashboard2\",\n            \"description\": \"\"\n        }\n    ],\n    \"user_info\": {\n        \"user_id\": \"12312\"\n    }\n}"
+								},
+								"url": {
+									"raw": "{{access_control_url}}/api/v2/services/create_services",
+									"host": [
+										"{{access_control_url}}"
+									],
+									"path": [
+										"api",
+										"v2",
+										"services",
+										"create_services"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "gunicorn/19.9.0"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 02 Sep 2019 04:44:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "ETag",
+									"value": "\"86370635eae8d00b72872cc30bf448bc\""
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "Content-Length",
+									"value": "61"
+								},
+								{
+									"key": "X-Response-Time",
+									"value": "446.65ms"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"data\": {\n        \"message\": \"Successfully Created\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "get_services",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{access_control_url}}/api/v2/acl/services/get_services",
+							"host": [
+								"{{access_control_url}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"acl",
+								"services",
+								"get_services"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get_services_success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{access_control_url}}/api/v2/services/get_services",
+									"host": [
+										"{{access_control_url}}"
+									],
+									"path": [
+										"api",
+										"v2",
+										"services",
+										"get_services"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "gunicorn/19.9.0"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 02 Sep 2019 02:33:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-Response-Time",
+									"value": "44.12ms"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2221"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"data\": [\n        {\n            \"created_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\",\n            \"description\": \"\",\n            \"id\": \"1\",\n            \"service_key\": \"dashboard\",\n            \"service_value\": \"Dashboard\",\n            \"updated_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\"\n        },\n        {\n            \"created_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\",\n            \"description\": \"\",\n            \"id\": \"10\",\n            \"service_key\": \"ai\",\n            \"service_value\": \"AI\",\n            \"updated_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\"\n        },\n        {\n            \"created_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\",\n            \"description\": \"\",\n            \"id\": \"11\",\n            \"service_key\": \"pos\",\n            \"service_value\": \"Point Of Sale\",\n            \"updated_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\"\n        },\n        {\n            \"created_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\",\n            \"description\": \"\",\n            \"id\": \"12\",\n            \"service_key\": \"user_management\",\n            \"service_value\": \"User Management\",\n            \"updated_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\"\n        },\n        {\n            \"created_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\",\n            \"description\": \"\",\n            \"id\": \"2\",\n            \"service_key\": \"products\",\n            \"service_value\": \"Products\",\n            \"updated_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\"\n        },\n        {\n            \"created_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\",\n            \"description\": \"\",\n            \"id\": \"3\",\n            \"service_key\": \"inventory\",\n            \"service_value\": \"Inventory\",\n            \"updated_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\"\n        },\n        {\n            \"created_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\",\n            \"description\": \"\",\n            \"id\": \"4\",\n            \"service_key\": \"pricing\",\n            \"service_value\": \"Pricing\",\n            \"updated_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\"\n        },\n        {\n            \"created_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\",\n            \"description\": \"\",\n            \"id\": \"5\",\n            \"service_key\": \"marketplaces\",\n            \"service_value\": \"Marketplaces\",\n            \"updated_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\"\n        },\n        {\n            \"created_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\",\n            \"description\": \"\",\n            \"id\": \"6\",\n            \"service_key\": \"orders\",\n            \"service_value\": \"Orders\",\n            \"updated_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\"\n        },\n        {\n            \"created_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\",\n            \"description\": \"\",\n            \"id\": \"7\",\n            \"service_key\": \"logistics\",\n            \"service_value\": \"Logistics\",\n            \"updated_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\"\n        },\n        {\n            \"created_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\",\n            \"description\": \"\",\n            \"id\": \"8\",\n            \"service_key\": \"payments\",\n            \"service_value\": \"Payments\",\n            \"updated_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\"\n        },\n        {\n            \"created_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\",\n            \"description\": \"\",\n            \"id\": \"9\",\n            \"service_key\": \"reports\",\n            \"service_value\": \"Reports\",\n            \"updated_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "update_service",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"id\": \"1\",\n            \"service_value\": \"Dashboard___\",\n            \"description\": \"tada\"\n        },\n        {\n            \"id\": \"2\",\n            \"service_value\": \"Dashboard--\",\n            \"description\": \"tada\"\n        }\n    ],\n    \"user_info\": {\n        \"user_id\": \"12312\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{access_control_url}}/api/v2/acl/services/update_service",
+							"host": [
+								"{{access_control_url}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"acl",
+								"services",
+								"update_service"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update_service_success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": [\n        {\n            \"id\": \"1\",\n            \"service_value\": \"Dashboard___\",\n            \"description\": \"tada\"\n        },\n        {\n            \"id\": \"2\",\n            \"service_value\": \"Dashboard--\",\n            \"description\": \"tada\"\n        }\n    ],\n    \"user_info\": {\n        \"user_id\": \"12312\"\n    }\n}"
+								},
+								"url": {
+									"raw": "{{access_control_url}}/api/v2/services/update_service",
+									"host": [
+										"{{access_control_url}}"
+									],
+									"path": [
+										"api",
+										"v2",
+										"services",
+										"update_service"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "gunicorn/19.9.0"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 02 Sep 2019 08:37:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "ETag",
+									"value": "\"f20ebd143487b72857130f6b24d2d7d0\""
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "Content-Length",
+									"value": "61"
+								},
+								{
+									"key": "X-Response-Time",
+									"value": "72.8ms"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"data\": {\n        \"message\": \"Successfully updated\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "scopes",
+			"item": [
+				{
+					"name": "create_scopes",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"scope_value\": \"Dashboard1\",\n            \"description\": \"\"\n        },\n        {\n            \"scope_value\": \"Dashboard2\",\n            \"description\": \"\"\n        }\n    ],\n    \"user_info\": {\n        \"user_id\": \"12312\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{access_control_url}}/api/v2/acl/scopes/create_scopes/:service_id",
+							"host": [
+								"{{access_control_url}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"acl",
+								"scopes",
+								"create_scopes",
+								":service_id"
+							],
+							"variable": [
+								{
+									"key": "service_id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create_services_success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": [\n        {\n            \"service_value\": \"Dashboard1\",\n            \"description\": \"\"\n        },\n        {\n            \"service_value\": \"Dashboard2\",\n            \"description\": \"\"\n        }\n    ],\n    \"user_info\": {\n        \"user_id\": \"12312\"\n    }\n}"
+								},
+								"url": {
+									"raw": "{{access_control_url}}/api/v2/services/create_services",
+									"host": [
+										"{{access_control_url}}"
+									],
+									"path": [
+										"api",
+										"v2",
+										"services",
+										"create_services"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "gunicorn/19.9.0"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 02 Sep 2019 04:44:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "ETag",
+									"value": "\"86370635eae8d00b72872cc30bf448bc\""
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "Content-Length",
+									"value": "61"
+								},
+								{
+									"key": "X-Response-Time",
+									"value": "446.65ms"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"data\": {\n        \"message\": \"Successfully Created\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "get_scopes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{access_control_url}}/api/v2/acl/scopes/get_scopes/:service_id",
+							"host": [
+								"{{access_control_url}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"acl",
+								"scopes",
+								"get_scopes",
+								":service_id"
+							],
+							"variable": [
+								{
+									"key": "service_id",
+									"value": "3",
+									"description": "Id of service"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get_services_success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{access_control_url}}/api/v2/services/get_services",
+									"host": [
+										"{{access_control_url}}"
+									],
+									"path": [
+										"api",
+										"v2",
+										"services",
+										"get_services"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "gunicorn/19.9.0"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 02 Sep 2019 02:33:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-Response-Time",
+									"value": "44.12ms"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2221"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"data\": [\n        {\n            \"created_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\",\n            \"description\": \"\",\n            \"id\": \"1\",\n            \"service_key\": \"dashboard\",\n            \"service_value\": \"Dashboard\",\n            \"updated_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\"\n        },\n        {\n            \"created_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\",\n            \"description\": \"\",\n            \"id\": \"10\",\n            \"service_key\": \"ai\",\n            \"service_value\": \"AI\",\n            \"updated_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\"\n        },\n        {\n            \"created_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\",\n            \"description\": \"\",\n            \"id\": \"11\",\n            \"service_key\": \"pos\",\n            \"service_value\": \"Point Of Sale\",\n            \"updated_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\"\n        },\n        {\n            \"created_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\",\n            \"description\": \"\",\n            \"id\": \"12\",\n            \"service_key\": \"user_management\",\n            \"service_value\": \"User Management\",\n            \"updated_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\"\n        },\n        {\n            \"created_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\",\n            \"description\": \"\",\n            \"id\": \"2\",\n            \"service_key\": \"products\",\n            \"service_value\": \"Products\",\n            \"updated_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\"\n        },\n        {\n            \"created_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\",\n            \"description\": \"\",\n            \"id\": \"3\",\n            \"service_key\": \"inventory\",\n            \"service_value\": \"Inventory\",\n            \"updated_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\"\n        },\n        {\n            \"created_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\",\n            \"description\": \"\",\n            \"id\": \"4\",\n            \"service_key\": \"pricing\",\n            \"service_value\": \"Pricing\",\n            \"updated_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\"\n        },\n        {\n            \"created_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\",\n            \"description\": \"\",\n            \"id\": \"5\",\n            \"service_key\": \"marketplaces\",\n            \"service_value\": \"Marketplaces\",\n            \"updated_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\"\n        },\n        {\n            \"created_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\",\n            \"description\": \"\",\n            \"id\": \"6\",\n            \"service_key\": \"orders\",\n            \"service_value\": \"Orders\",\n            \"updated_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\"\n        },\n        {\n            \"created_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\",\n            \"description\": \"\",\n            \"id\": \"7\",\n            \"service_key\": \"logistics\",\n            \"service_value\": \"Logistics\",\n            \"updated_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\"\n        },\n        {\n            \"created_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\",\n            \"description\": \"\",\n            \"id\": \"8\",\n            \"service_key\": \"payments\",\n            \"service_value\": \"Payments\",\n            \"updated_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\"\n        },\n        {\n            \"created_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\",\n            \"description\": \"\",\n            \"id\": \"9\",\n            \"service_key\": \"reports\",\n            \"service_value\": \"Reports\",\n            \"updated_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "update_scopes",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"id\": \"2\",\n            \"scope_value\": \"Dashboard___\",\n            \"description\": \"tada\"\n        },\n        {\n            \"id\": \"3\",\n            \"scope_value\": \"Dashboard--\",\n            \"description\": \"tada\"\n        }\n    ],\n    \"user_info\": {\n        \"user_id\": \"12312\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{access_control_url}}/api/v2/acl/scopes/update_scopes",
+							"host": [
+								"{{access_control_url}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"acl",
+								"scopes",
+								"update_scopes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update_service_success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": {\n        \"id\": \"1\",\n        \"service_value\": \"Dashboard\",\n        \"description\":\"tada\"\n    },\n    \"user_info\":{\n    \t\"user_id\":\"12312\"\n    }\n}"
+								},
+								"url": {
+									"raw": "{{access_control_url}}/api/v2/services/update_service",
+									"host": [
+										"{{access_control_url}}"
+									],
+									"path": [
+										"api",
+										"v2",
+										"services",
+										"update_service"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "gunicorn/19.9.0"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 02 Sep 2019 08:37:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "ETag",
+									"value": "\"f20ebd143487b72857130f6b24d2d7d0\""
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "Content-Length",
+									"value": "61"
+								},
+								{
+									"key": "X-Response-Time",
+									"value": "72.8ms"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"data\": {\n        \"message\": \"Successfully updated\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "get_all_services_scopes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{access_control_url}}/api/v2/acl/scopes/get_all_services_scopes",
+							"host": [
+								"{{access_control_url}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"acl",
+								"scopes",
+								"get_all_services_scopes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get_services_success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{access_control_url}}/api/v2/services/get_services",
+									"host": [
+										"{{access_control_url}}"
+									],
+									"path": [
+										"api",
+										"v2",
+										"services",
+										"get_services"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "gunicorn/19.9.0"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 02 Sep 2019 02:33:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-Response-Time",
+									"value": "44.12ms"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2221"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"data\": [\n        {\n            \"created_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\",\n            \"description\": \"\",\n            \"id\": \"1\",\n            \"service_key\": \"dashboard\",\n            \"service_value\": \"Dashboard\",\n            \"updated_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\"\n        },\n        {\n            \"created_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\",\n            \"description\": \"\",\n            \"id\": \"10\",\n            \"service_key\": \"ai\",\n            \"service_value\": \"AI\",\n            \"updated_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\"\n        },\n        {\n            \"created_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\",\n            \"description\": \"\",\n            \"id\": \"11\",\n            \"service_key\": \"pos\",\n            \"service_value\": \"Point Of Sale\",\n            \"updated_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\"\n        },\n        {\n            \"created_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\",\n            \"description\": \"\",\n            \"id\": \"12\",\n            \"service_key\": \"user_management\",\n            \"service_value\": \"User Management\",\n            \"updated_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\"\n        },\n        {\n            \"created_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\",\n            \"description\": \"\",\n            \"id\": \"2\",\n            \"service_key\": \"products\",\n            \"service_value\": \"Products\",\n            \"updated_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\"\n        },\n        {\n            \"created_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\",\n            \"description\": \"\",\n            \"id\": \"3\",\n            \"service_key\": \"inventory\",\n            \"service_value\": \"Inventory\",\n            \"updated_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\"\n        },\n        {\n            \"created_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\",\n            \"description\": \"\",\n            \"id\": \"4\",\n            \"service_key\": \"pricing\",\n            \"service_value\": \"Pricing\",\n            \"updated_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\"\n        },\n        {\n            \"created_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\",\n            \"description\": \"\",\n            \"id\": \"5\",\n            \"service_key\": \"marketplaces\",\n            \"service_value\": \"Marketplaces\",\n            \"updated_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\"\n        },\n        {\n            \"created_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\",\n            \"description\": \"\",\n            \"id\": \"6\",\n            \"service_key\": \"orders\",\n            \"service_value\": \"Orders\",\n            \"updated_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\"\n        },\n        {\n            \"created_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\",\n            \"description\": \"\",\n            \"id\": \"7\",\n            \"service_key\": \"logistics\",\n            \"service_value\": \"Logistics\",\n            \"updated_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\"\n        },\n        {\n            \"created_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\",\n            \"description\": \"\",\n            \"id\": \"8\",\n            \"service_key\": \"payments\",\n            \"service_value\": \"Payments\",\n            \"updated_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\"\n        },\n        {\n            \"created_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\",\n            \"description\": \"\",\n            \"id\": \"9\",\n            \"service_key\": \"reports\",\n            \"service_value\": \"Reports\",\n            \"updated_at\": \"Sun, 21 Jul 2019 20:53:16 GMT\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "profiles",
+			"item": [
+				{
+					"name": "create_profile",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"create_user_map\": true,\n        \"profile_info\": {\n            \"profile_name\": \"2312312\",\n            \"description\": \"3123213123\"\n        },\n        \"acls\": [\n            {\n                \"service_id\": \"2\",\n                \"scope_id\": \"2\",\n                \"permission_level\": 0\n            },\n            {\n                \"service_id\": \"2\",\n                \"scope_id\": \"3\",\n                \"permission_level\": 0\n            },\n            {\n                \"service_id\": \"3\",\n                \"scope_id\": \"4\",\n                \"permission_level\": 2\n            },\n            {\n                \"service_id\": \"3\",\n                \"scope_id\": \"5\",\n                \"permission_level\": 2\n            },\n            {\n                \"service_id\": \"3\",\n                \"scope_id\": \"6\",\n                \"permission_level\": 2\n            },\n            {\n                \"service_id\": \"3\",\n                \"scope_id\": \"7\",\n                \"permission_level\": 2\n            },\n            {\n                \"service_id\": \"4\",\n                \"scope_id\": \"8\",\n                \"permission_level\": 0\n            },\n            {\n                \"service_id\": \"4\",\n                \"scope_id\": \"9\",\n                \"permission_level\": 0\n            },\n            {\n                \"service_id\": \"4\",\n                \"scope_id\": \"10\",\n                \"permission_level\": 0\n            },\n            {\n                \"service_id\": \"5\",\n                \"scope_id\": \"11\",\n                \"permission_level\": 0\n            },\n            {\n                \"service_id\": \"11\",\n                \"scope_id\": \"12\",\n                \"permission_level\": 0\n            },\n            {\n                \"service_id\": \"11\",\n                \"scope_id\": \"13\",\n                \"permission_level\": 0\n            },\n            {\n                \"service_id\": \"11\",\n                \"scope_id\": \"14\",\n                \"permission_level\": 0\n            },\n            {\n                \"service_id\": \"11\",\n                \"scope_id\": \"15\",\n                \"permission_level\": 0\n            },\n            {\n                \"service_id\": \"11\",\n                \"scope_id\": \"16\",\n                \"permission_level\": 0\n            },\n            {\n                \"service_id\": \"07580d7d-9619-431a-9616-3650e8b698cd\",\n                \"scope_id\": \"97fc9090-cbf4-49b4-8f9a-c4271d9ba7da\",\n                \"permission_level\": 0\n            },\n            {\n                \"service_id\": \"3\",\n                \"scope_id\": \"bcc68761-3fc4-4de8-a67c-c43e64dde787\",\n                \"permission_level\": 2\n            },\n            {\n                \"service_id\": \"3\",\n                \"scope_id\": \"c3105566-dba7-40cb-b418-7711d64d5824\",\n                \"permission_level\": 2\n            },\n            {\n                \"service_id\": \"3\",\n                \"scope_id\": \"b7f5ce79-0b00-4078-88d3-6bd2e5cfa7f2\",\n                \"permission_level\": 2\n            },\n            {\n                \"service_id\": \"3\",\n                \"scope_id\": \"2890aff4-0292-4293-b7c9-694ed19c13ca\",\n                \"permission_level\": 2\n            },\n            {\n                \"service_id\": \"3\",\n                \"scope_id\": \"c88db68a-b5d8-4da2-9196-f3289b099149\",\n                \"permission_level\": 2\n            },\n            {\n                \"service_id\": \"3\",\n                \"scope_id\": \"5cfb03f5-7a6c-4164-b8fc-3b4e4fe4b720\",\n                \"permission_level\": 2\n            },\n            {\n                \"service_id\": \"3\",\n                \"scope_id\": \"e4f80ed9-e879-428b-8185-284fc024d641\",\n                \"permission_level\": 2\n            },\n            {\n                \"service_id\": \"3\",\n                \"scope_id\": \"c4c0012e-56dc-42ed-8a7b-02f7e28796ce\",\n                \"permission_level\": 2\n            },\n            {\n                \"service_id\": \"3\",\n                \"scope_id\": \"705cfbc8-fc58-4a2a-a776-01421dc67b2a\",\n                \"permission_level\": 2\n            },\n            {\n                \"service_id\": \"3\",\n                \"scope_id\": \"32b537bd-fc3f-465f-b2b4-ea8d5c50e53e\",\n                \"permission_level\": 2\n            },\n            {\n                \"service_id\": \"3\",\n                \"scope_id\": \"1c55b906-82fb-49b6-8dd5-1a8e3d6d56db\",\n                \"permission_level\": 2\n            },\n            {\n                \"service_id\": \"3\",\n                \"scope_id\": \"ec0c2908-6e45-4031-b4b8-65fe1ca655e9\",\n                \"permission_level\": 2\n            },\n            {\n                \"service_id\": \"3\",\n                \"scope_id\": \"1d07f5d6-d4a5-454e-a422-a4f930f0d936\",\n                \"permission_level\": 2\n            },\n            {\n                \"service_id\": \"3\",\n                \"scope_id\": \"bea618d4-5fec-495a-b357-b15e4f52ab3d\",\n                \"permission_level\": 2\n            },\n            {\n                \"service_id\": \"3\",\n                \"scope_id\": \"4b9043ab-0bb4-41ac-b148-d2022c5ddb22\",\n                \"permission_level\": 2\n            },\n            {\n                \"service_id\": \"3\",\n                \"scope_id\": \"b8f71eb9-f3da-4bb4-8535-c0eb7378c782\",\n                \"permission_level\": 2\n            },\n            {\n                \"service_id\": \"df6e386d-3744-4ed4-9c34-3c77acb082e8\",\n                \"scope_id\": \"eda568b3-4d46-4df5-ab98-d740d8ede7e7\",\n                \"permission_level\": 0\n            },\n            {\n                \"service_id\": \"df6e386d-3744-4ed4-9c34-3c77acb082e8\",\n                \"scope_id\": \"11405f14-bf38-4ed7-9be5-5e5fbbbb249c\",\n                \"permission_level\": 0\n            },\n            {\n                \"service_id\": \"6d2569e5-d91c-4879-a76b-9ce3704e9eb9\",\n                \"scope_id\": \"147b302a-cbf5-4641-baca-b0fb23de14ea\",\n                \"permission_level\": 0\n            },\n            {\n                \"service_id\": \"6d2569e5-d91c-4879-a76b-9ce3704e9eb9\",\n                \"scope_id\": \"73a4979e-26e7-46b5-9158-ed466f1d0e52\",\n                \"permission_level\": 0\n            }\n        ]\n    },\n    \"user_info\": {\n        \"user_id\": \"default\",\n        \"current_user_id\": 1,\n        \"account_id\": \"default\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{access_control_url}}/api/v2/acl/profiles/create_profile",
+							"host": [
+								"{{access_control_url}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"acl",
+								"profiles",
+								"create_profile"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create_profile_without_any_user_map",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": {\n    \t\"create_user_map\":false,\n    \t\"profile_info\":{\n    \t\t\"profile_name\":\"Account Manager 9\",\n    \t\t\"description\":\"This profile can manage all actions\"\n    \t\t\n    \t},\n        \"acls\": [\n            {\n                \"service_id\": \"11\",\n                \"scope_id\": \"12\",\n        \t\t\"permission_level\":\"0\"\n            },\n            {\n                \"service_id\": \"11\",\n                \"scope_id\": \"13\",\n        \t\t\"permission_level\":\"0\"\n            },\n            {\n                \"service_id\": \"11\",\n                \"scope_id\": \"14\",\n        \t\t\"permission_level\":\"0\"\n            }\n            \n        ]\n    },\n    \"user_info\": {\n        \n        \"current_user_id\":\"2321321\",\n        \"account_id\":\"233342\"\n    }\n}"
+								},
+								"url": {
+									"raw": "{{access_control_url}}/api/v2/profiles/create_profile",
+									"host": [
+										"{{access_control_url}}"
+									],
+									"path": [
+										"api",
+										"v2",
+										"profiles",
+										"create_profile"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "gunicorn/19.9.0"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Sep 2019 02:47:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "ETag",
+									"value": "\"f469c6001827d1fc9669e61311d806c0\""
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "Content-Length",
+									"value": "58"
+								},
+								{
+									"key": "X-Response-Time",
+									"value": "2199.09ms"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Sucessfully created profile\",\n    \"status\": true\n}"
+						},
+						{
+							"name": "create_profile_inclueding_user",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": {\n    \t\"create_user_map\":true,\n    \t\"profile_info\":{\n    \t\t\"profile_name\":\"Account Manager 9\",\n    \t\t\"description\":\"This profile can manage all actions\"\n    \t\t\n    \t},\n        \"acls\": [\n            {\n                \"service_id\": \"11\",\n                \"scope_id\": \"12\",\n        \t\t\"permission_level\":\"0\"\n            },\n            {\n                \"service_id\": \"11\",\n                \"scope_id\": \"13\",\n        \t\t\"permission_level\":\"0\"\n            },\n            {\n                \"service_id\": \"11\",\n                \"scope_id\": \"14\",\n        \t\t\"permission_level\":\"0\"\n            }\n            \n        ]\n    },\n    \"user_info\": {\n        \"user_id\": \"12312\",\n        \"current_user_id\":\"2321321\",\n        \"account_id\":\"233342\"\n    }\n}"
+								},
+								"url": {
+									"raw": "{{access_control_url}}/api/v2/profiles/create_profile",
+									"host": [
+										"{{access_control_url}}"
+									],
+									"path": [
+										"api",
+										"v2",
+										"profiles",
+										"create_profile"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "gunicorn/19.9.0"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Sep 2019 02:47:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "ETag",
+									"value": "\"f469c6001827d1fc9669e61311d806c0\""
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "Content-Length",
+									"value": "58"
+								},
+								{
+									"key": "X-Response-Time",
+									"value": "2199.09ms"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Sucessfully created profile\",\n    \"status\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "add_user_to_profile",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n    \t\n    \t\"profile_id\":\"f838216a-a990-4b3e-a23f-5625a294d54d\",\n    \t\"user_id\": \"123122\"\n    },\n    \"user_info\": {\n        \"current_user_id\":\"2321321\",\n        \"account_id\":\"233342\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{access_control_url}}/api/v2/acl/profiles/add_user_to_profile",
+							"host": [
+								"{{access_control_url}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"acl",
+								"profiles",
+								"add_user_to_profile"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "add_user_to_profile-sucess",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": {\n    \t\n    \t\"profile_id\":\"f838216a-a990-4b3e-a23f-5625a294d54d\",\n    \t\"user_id\": \"123122\"\n    },\n    \"user_info\": {\n        \"current_user_id\":\"2321321\",\n        \"account_id\":\"233342\"\n    }\n}"
+								},
+								"url": {
+									"raw": "{{access_control_url}}/api/v2/profiles/add_user_to_profile",
+									"host": [
+										"{{access_control_url}}"
+									],
+									"path": [
+										"api",
+										"v2",
+										"profiles",
+										"add_user_to_profile"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "gunicorn/19.9.0"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Sep 2019 03:38:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "ETag",
+									"value": "\"4a2a7c9f7869b77e201f8b89f21ad995\""
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "Content-Length",
+									"value": "71"
+								},
+								{
+									"key": "X-Response-Time",
+									"value": "604.49ms"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Sucessfully the user is added to profile\",\n    \"status\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "get_profiles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{access_control_url}}/api/v2/acl/profiles/get_profiles/:account_id",
+							"host": [
+								"{{access_control_url}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"acl",
+								"profiles",
+								"get_profiles",
+								":account_id"
+							],
+							"variable": [
+								{
+									"key": "account_id",
+									"value": "233342"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get_profiles-success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{access_control_url}}/api/v2/profiles/get_profiles/:account_id",
+									"host": [
+										"{{access_control_url}}"
+									],
+									"path": [
+										"api",
+										"v2",
+										"profiles",
+										"get_profiles",
+										":account_id"
+									],
+									"variable": [
+										{
+											"key": "account_id",
+											"value": "233342"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "gunicorn/19.9.0"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Sep 2019 04:04:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "ETag",
+									"value": "\"ed998102c44b57350e46b2290a6c6c39\""
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "Content-Length",
+									"value": "453"
+								},
+								{
+									"key": "X-Response-Time",
+									"value": "2.8ms"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"created_at\": null,\n            \"description\": \"This profile can manage all actions\",\n            \"id\": \"616634ae-64a3-42e1-b30b-af9e779872e9\",\n            \"profile_name\": \"Account Manager 21\",\n            \"updated_at\": null,\n            \"updated_by\": \"2321321\"\n        },\n        {\n            \"created_at\": null,\n            \"description\": \"This profile can manage al\",\n            \"id\": \"f838216a-a990-4b3e-a23f-5625a294d54d\",\n            \"profile_name\": \"Account Manager 9\",\n            \"updated_at\": \"Wed, 04 Sep 2019 08:55:19 GMT\",\n            \"updated_by\": \"2321321\"\n        }\n    ],\n    \"status\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "update_profile_info",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n    \t\n    \t\"profile_id\":\"0e814f07-5d87-46c2-92c0-18da542b09f3\",\n    \t\t\n        \"profile_info\": {\n            \"profile_name\": \"fsdfsdffjhj\",\n            \"description\": \"312321fsdfsd3123\"\n        }\n    },\n    \"user_info\": {\n        \"current_user_id\":\"2321321\",\n        \"account_id\":\"233342\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{access_control_url}}/api/v2/acl/profiles/update_profile_info",
+							"host": [
+								"{{access_control_url}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"acl",
+								"profiles",
+								"update_profile_info"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update_profile-success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": {\n    \t\n    \t\"profile_id\":\"64d0f34b-59e3-4edc-a92b-8e3d1bd4417c\",\n    \t\t\n        \"acls\": [\n             {\n                \"service_id\": \"11\",\n                \"scope_id\": \"12\",\n        \t\t\"permission_level\":\"6\"\n            },\n            {\n                \"service_id\": \"11\",\n                \"scope_id\": \"13\",\n        \t\t\"permission_level\":\"8\"\n            },\n            {\n                \"service_id\": \"11\",\n                \"scope_id\": \"14\",\n        \t\t\"permission_level\":\"4\"\n            }\n        ]\n    },\n    \"user_info\": {\n        \"current_user_id\":\"2321321\",\n        \"account_id\":\"233342\"\n    }\n}"
+								},
+								"url": {
+									"raw": "{{access_control_url}}/api/v2/profiles/update_profile",
+									"host": [
+										"{{access_control_url}}"
+									],
+									"path": [
+										"api",
+										"v2",
+										"profiles",
+										"update_profile"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "gunicorn/19.9.0"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Sep 2019 02:13:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "ETag",
+									"value": "\"132cd3c8299225b4c447e91a7fd35b72\""
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "Content-Length",
+									"value": "59"
+								},
+								{
+									"key": "X-Response-Time",
+									"value": "621.12ms"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully updated profile\",\n    \"status\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "update_profile",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n    \t\n    \t\"profile_id\":\"64d0f34b-59e3-4edc-a92b-8e3d1bd4417c\",\n    \t\t\n        \"acls\": [\n             {\n                \"service_id\": \"11\",\n                \"scope_id\": \"12\",\n        \t\t\"permission_level\":\"6\"\n            },\n            {\n                \"service_id\": \"11\",\n                \"scope_id\": \"13\",\n        \t\t\"permission_level\":\"8\"\n            },\n            {\n                \"service_id\": \"11\",\n                \"scope_id\": \"14\",\n        \t\t\"permission_level\":\"4\"\n            }\n        ]\n    },\n    \"user_info\": {\n        \"current_user_id\":\"2321321\",\n        \"account_id\":\"233342\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{access_control_url}}/api/v2/acl/profiles/update_profile",
+							"host": [
+								"{{access_control_url}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"acl",
+								"profiles",
+								"update_profile"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update_profile-success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": {\n    \t\n    \t\"profile_id\":\"64d0f34b-59e3-4edc-a92b-8e3d1bd4417c\",\n    \t\t\n        \"acls\": [\n             {\n                \"service_id\": \"11\",\n                \"scope_id\": \"12\",\n        \t\t\"permission_level\":\"6\"\n            },\n            {\n                \"service_id\": \"11\",\n                \"scope_id\": \"13\",\n        \t\t\"permission_level\":\"8\"\n            },\n            {\n                \"service_id\": \"11\",\n                \"scope_id\": \"14\",\n        \t\t\"permission_level\":\"4\"\n            }\n        ]\n    },\n    \"user_info\": {\n        \"current_user_id\":\"2321321\",\n        \"account_id\":\"233342\"\n    }\n}"
+								},
+								"url": {
+									"raw": "{{access_control_url}}/api/v2/profiles/update_profile",
+									"host": [
+										"{{access_control_url}}"
+									],
+									"path": [
+										"api",
+										"v2",
+										"profiles",
+										"update_profile"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "gunicorn/19.9.0"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Sep 2019 02:13:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "ETag",
+									"value": "\"132cd3c8299225b4c447e91a7fd35b72\""
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "Content-Length",
+									"value": "59"
+								},
+								{
+									"key": "X-Response-Time",
+									"value": "621.12ms"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully updated profile\",\n    \"status\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "get_profile_acls",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{access_control_url}}/api/v2/acl/profiles/get_profiles_acls/:profile_id",
+							"host": [
+								"{{access_control_url}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"acl",
+								"profiles",
+								"get_profiles_acls",
+								":profile_id"
+							],
+							"variable": [
+								{
+									"key": "profile_id",
+									"value": "67237976-f1d9-49b7-8cbe-2685ba61cdd3"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get_profiles-success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{access_control_url}}/api/v2/profiles/get_profiles/:account_id",
+									"host": [
+										"{{access_control_url}}"
+									],
+									"path": [
+										"api",
+										"v2",
+										"profiles",
+										"get_profiles",
+										":account_id"
+									],
+									"variable": [
+										{
+											"key": "account_id",
+											"value": "233342"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "gunicorn/19.9.0"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Sep 2019 04:04:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "ETag",
+									"value": "\"ed998102c44b57350e46b2290a6c6c39\""
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "Content-Length",
+									"value": "453"
+								},
+								{
+									"key": "X-Response-Time",
+									"value": "2.8ms"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"created_at\": null,\n            \"description\": \"This profile can manage all actions\",\n            \"id\": \"616634ae-64a3-42e1-b30b-af9e779872e9\",\n            \"profile_name\": \"Account Manager 21\",\n            \"updated_at\": null,\n            \"updated_by\": \"2321321\"\n        },\n        {\n            \"created_at\": null,\n            \"description\": \"This profile can manage al\",\n            \"id\": \"f838216a-a990-4b3e-a23f-5625a294d54d\",\n            \"profile_name\": \"Account Manager 9\",\n            \"updated_at\": \"Wed, 04 Sep 2019 08:55:19 GMT\",\n            \"updated_by\": \"2321321\"\n        }\n    ],\n    \"status\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "get_default_profiles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{access_control_url}}/api/v2/acl/profiles/get_default_profiles",
+							"host": [
+								"{{access_control_url}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"acl",
+								"profiles",
+								"get_default_profiles"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get_profiles-success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{access_control_url}}/api/v2/profiles/get_profiles/:account_id",
+									"host": [
+										"{{access_control_url}}"
+									],
+									"path": [
+										"api",
+										"v2",
+										"profiles",
+										"get_profiles",
+										":account_id"
+									],
+									"variable": [
+										{
+											"key": "account_id",
+											"value": "233342"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "gunicorn/19.9.0"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Sep 2019 04:04:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "ETag",
+									"value": "\"ed998102c44b57350e46b2290a6c6c39\""
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "Content-Length",
+									"value": "453"
+								},
+								{
+									"key": "X-Response-Time",
+									"value": "2.8ms"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"created_at\": null,\n            \"description\": \"This profile can manage all actions\",\n            \"id\": \"616634ae-64a3-42e1-b30b-af9e779872e9\",\n            \"profile_name\": \"Account Manager 21\",\n            \"updated_at\": null,\n            \"updated_by\": \"2321321\"\n        },\n        {\n            \"created_at\": null,\n            \"description\": \"This profile can manage al\",\n            \"id\": \"f838216a-a990-4b3e-a23f-5625a294d54d\",\n            \"profile_name\": \"Account Manager 9\",\n            \"updated_at\": \"Wed, 04 Sep 2019 08:55:19 GMT\",\n            \"updated_by\": \"2321321\"\n        }\n    ],\n    \"status\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "get user acl",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{access_control_url}}/api/v2/acl/profiles/get_user_profile/:account_id/:user_id",
+							"host": [
+								"{{access_control_url}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"acl",
+								"profiles",
+								"get_user_profile",
+								":account_id",
+								":user_id"
+							],
+							"variable": [
+								{
+									"key": "account_id",
+									"value": "454352"
+								},
+								{
+									"key": "user_id",
+									"value": "5675675"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user_actions",
+			"item": [
+				{
+					"name": "new account map scope",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"account_id\":\"06032282-551d-4ac9-a18c-2394e8f674d8\"\n}"
+						},
+						"url": {
+							"raw": "{{access_control_url}}/api/v2/acl/user_actions/map_user_scope",
+							"host": [
+								"{{access_control_url}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"acl",
+								"user_actions",
+								"map_user_scope"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get account scopes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{access_control_url}}/api/v2/acl/user_actions/get_account_scope/06032282-551d-4ac9-a18c-2394e8f674d8",
+							"host": [
+								"{{access_control_url}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"acl",
+								"user_actions",
+								"get_account_scope",
+								"06032282-551d-4ac9-a18c-2394e8f674d8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,15 @@
+*.idea
+*.pyc
+*.vscode
+.env
+venv
+env
+.vscode
+dummy.json
+Amazon_India/*
+Amazon_USA/*
+Amazon_UK/*
+Flipkart/*
+Bonanza/*
+eBay/*
+Etsy/*
